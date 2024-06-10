@@ -1,5 +1,7 @@
 const myPersona = '{"name": "Phan Minh Anh", "job": "Students", "from": "Dak Mil, Vietnam", "email": "nhuquynh.060886@gmail.com", "phonenum": "+84 946456634"}'
+const myJobs = '["Students", "Developer"]'
 const myObj = JSON.parse(myPersona)
+const JobsObj = JSON.parse(myJobs)
 const header = document.querySelector('#header')
 const doc = document
 
