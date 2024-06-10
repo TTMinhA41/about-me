@@ -22,18 +22,34 @@ function handleScroll() {
 }
 window.addEventListener('scroll', handleScroll)
 
+
 doc.addEventListener("DOMContentLoaded", function(){
-    const text = myObj.job
+    const texts = [
+        "Students",
+        "Web Designer",
+        "Introverter"
+    ]
     const typingTextElement = doc.getElementById('say-job')
-    let index = 0
+    let textIndex = 0
+    let charIndex = 0
+    const delayLoop = 250;
+    const typingSpeed = 250;
 
     function type(){
-        if (index < text.length){
-            typingTextElement.innerHTML += text.charAt(index);
-            index ++;
-            setTimeout(type, 100)
+        if (charIndex < texts[textIndex].length){
+            typingTextElement.innerHTML += texts[textIndex].charAt(charIndex);
+            charIndex ++;
+            setTimeout(type, typingSpeed)
+        }
+        else{
+            setTimeout(() => {
+                charIndex = 0;
+                textIndex = (textIndex + 1) % texts.length
+                typingTextElement.innerHTML = "";
+                setTimeout(type, typingSpeed); 
+            }, delayLoop)
         }
     }
 
-    type();
+    setTimeout(type, delayLoop);
 })

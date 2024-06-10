@@ -138,6 +138,7 @@ a {
 
                 #say-job {
                     font-size: 100px;
+                    min-height: 127px;
                     color: transparent;
                     font-weight: 700;
                     font-family: 'Dosis', sans-serif;
