@@ -1,4 +1,4 @@
-const myPersona = '{"name": "Phan Minh Anh", "job": "Students", "from": "Dak Mil, Vietnam", "email": "nhuquynh.060886@gmail.com", "phonenum": "+84 946456634"}'
+const myPersona = '{"name": "Phan Minh Anh", "from": "Dak Mil, Vietnam", "email": "nhuquynh.060886@gmail.com", "phonenum": "+84 946456634"}'
 const myJobs = '["Students", "Developer"]'
 const myObj = JSON.parse(myPersona)
 const JobsObj = JSON.parse(myJobs)
@@ -23,18 +23,3 @@ function handleScroll() {
     }
 }
 window.addEventListener('scroll', handleScroll)
-doc.addEventListener("DOMContentLoaded", function(){
-    const text = myObj.job
-    const typingTextElement = doc.getElementById('say-job')
-    let index = 0
-
-    function type(){
-        if (index < text.length){
-            typingTextElement.innerHTML += text.charAt(index);
-            index ++;
-            setTimeout(type, 100)
-        }
-    }
-
-    type();
-})
