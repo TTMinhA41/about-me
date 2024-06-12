@@ -98,10 +98,6 @@ a {
             color: white;
             font-size: 24px;
         }
-
-        .head-icons.fa-moon-o {
-            margin-left: 10px;
-        }
     }
 }
 
@@ -217,9 +213,9 @@ a {
     .img-container {
         justify-content: center;
         img {
-            margin: 10px;
             max-width: 100%;
             border-radius: 10px;
+            height: auto;
         }
     }
 
@@ -323,12 +319,11 @@ a {
 }
 
 @media (max-width: 991px) {
-    .img-container {
+    .img-container, .home-view {
         height: 450px;
         overflow: hidden;
-        width: 100%;
-        img{
-            height: auto;
-        }
+    }
+    .head-icons.faicon.fa-moon-o{
+        display: none;
     }
 }
