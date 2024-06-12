@@ -129,7 +129,6 @@ a {
 
             .greeting {
                 margin: auto;
-
                 #say-hi {
                     color: white;
                     margin-bottom: 16px;
@@ -216,7 +215,6 @@ a {
     }
 
     .img-container {
-        display: flex;
         justify-content: center;
         img {
             margin: 10px;
@@ -320,6 +318,17 @@ a {
                 }
             }
 
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .img-container {
+        height: 450px;
+        overflow: hidden;
+        width: 100%;
+        img{
+            height: auto;
         }
     }
 }
