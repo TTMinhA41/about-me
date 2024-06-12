@@ -335,3 +335,12 @@ a {
         display: none;
     }
 }
+@media (max-width: 568px){
+    .img-container, .home-view{
+        height: 350px;
+    }
+    #say-job{
+        font-size: 45px;
+        min-height: 65px;
+    }
+}
