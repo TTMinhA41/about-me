@@ -319,6 +319,14 @@ a {
 }
 
 @media (max-width: 991px) {
+    #header{
+        height: auto;
+        padding: 20px 0;
+    }
+    #header.scroll-fixed{
+        height: auto;
+        padding: 25px 0;
+    }
     .img-container, .home-view {
         height: 450px;
         overflow: hidden;
