@@ -335,14 +335,44 @@
 
 #i-do {
     width: 100%;
+    background-color: #f6f6f6;
     .inner-do-for {
+        padding: 48px;
         .row {
             .title-header {
+                margin-bottom: 48px;
+
                 .what-i-do-for-you {
-                    margin-bottom: 48px;
                     text-align: center;
-                    color: #707070;
-                    font-size: 16px;
+                    color: #404044;
+                    font-size: 38px;
+                }
+            }
+
+            .tasks {
+                .about-task {
+                    background-color: white;
+                    padding: 40px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+                    .task-icon {
+                        margin-bottom: 24px;
+                        .faicon {
+                            font-size: 40px;
+                            color: #007e6a;
+                        }
+                    }
+
+                    .task-text {
+                        .task-title {
+                            margin-bottom: 16px;
+                            color: #404044;
+                            font-size: 27px;
+                        }
+                        .task-about{
+                            font-size: 18px;
+                            color: #707070;
+                        }
+                    }
                 }
             }
         }
