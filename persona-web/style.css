@@ -118,8 +118,8 @@ a {
 
     .home-container {
         padding-top: 48px;
-        padding-right: 15px;
-        padding-left: 15px;
+        /* padding-right: 15px;
+        padding-left: 15px; */
 
         .row {
             padding-top: 48px;
@@ -218,7 +218,8 @@ a {
 
     .img-container {
         justify-content: center;
-
+        padding: 0 15px;
+        margin-bottom: 24px;
         img {
             max-width: 100%;
             border-radius: 10px;
@@ -227,6 +228,7 @@ a {
     }
 
     .left-container {
+        padding: 0 27px;
         .psn-texts {
             .ab-me {
                 margin: 10px 0;
@@ -264,6 +266,7 @@ a {
                         display: flex;
                         padding: 10px 0;
                         margin: 10px 0;
+                        flex-wrap: wrap;
 
                         h3 {
                             color: #404044;
@@ -376,5 +379,31 @@ a {
     .img-container,
     .home-view {
         height: 350px;
+    }
+}
+@media (max-width: 480px){
+    #persona-card{
+        .inner{
+            .row{
+                .left-container{
+                    .psn-texts{
+                        .ab-me{
+                            .title{
+                                font-size: 26px;
+                            }
+                        }
+                        .psn-info{
+                            .psn-sides{
+                                .psn-label{
+                                    #email{
+                                        overflow-wrap: anywhere;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
