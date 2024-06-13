@@ -382,6 +382,15 @@ a {
     }
 }
 @media (max-width: 480px){
+    #header{
+        .inner-header{
+            .row{
+                .nav-container{
+                    display: none;
+                }
+            }
+        }
+    }
     #persona-card{
         .inner{
             .row{

@@ -27,7 +27,7 @@ doc.addEventListener("DOMContentLoaded", function(){
     const texts = [
         "Students",
         "Web Designer",
-        "Introverter"
+        "Etc."
     ]
     const typingTextElement = doc.getElementById('say-job')
     let textIndex = 0
