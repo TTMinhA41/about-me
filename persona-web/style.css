@@ -336,8 +336,10 @@
 #i-do {
     width: 100%;
     background-color: #f6f6f6;
+
     .inner-do-for {
-        padding: 48px;
+        padding: 48px 0;
+
         .row {
             .title-header {
                 margin-bottom: 48px;
@@ -354,8 +356,10 @@
                     background-color: white;
                     padding: 40px;
                     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+
                     .task-icon {
                         margin-bottom: 24px;
+
                         .faicon {
                             font-size: 40px;
                             color: #007e6a;
@@ -367,11 +371,65 @@
                             margin-bottom: 16px;
                             color: #404044;
                             font-size: 27px;
+                            transition: all 0.4s ease;
+                            cursor: pointer;
                         }
-                        .task-about{
+
+                        .task-about {
                             font-size: 18px;
                             color: #707070;
                         }
+                    }
+                }
+
+                .about-task:hover {
+                    .task-text {
+                        .task-title {
+                            color: #007e6a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#my-skill {
+    padding: 96px 0;
+
+    .inner-skill {
+        .row {
+            .skill-view {
+                img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    height: auto;
+                }
+            }
+
+            .skill-text {
+                .upper-skill {
+                    .my-skill {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #707070;
+                        letter-spacing: 1px;
+                        display: inline-block;
+                        margin-bottom: 8px;
+                    }
+
+                    .skill-title {
+                        color: #404044;
+                        font-size: 38px;
+                        margin-bottom: 8px;
+                    }
+
+                    .skill-about {
+                        word-wrap: break-word;
+                        margin: 24px 0;
+                        padding-right: 48px;
+                        font-size: 18px;
+                        color: #707070;
                     }
                 }
             }
