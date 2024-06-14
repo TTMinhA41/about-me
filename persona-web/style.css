@@ -449,20 +449,22 @@
                                 overflow: hidden;
                                 background-color: #f6f6f6;
                                 border-radius: 4px;
-                                .progress-bar{
+                                #progress-bar{
                                     background-color: #007e6a;
                                     height: 100%;
+                                    border-radius: 4px;
+                                    transition: all 0.4s ease;
                                 }
-                                .progress-bar.ui{
+                                #progress-bar.ui{
                                     width: 80%;
                                 }
-                                .progress-bar.idea{
+                                #progress-bar.idea{
                                     width: 95%;
                                 }
-                                .progress-bar.brand{
+                                #progress-bar.brand{
                                     width: 55%;
                                 }
-                                .progress-bar.responsive{
+                                #progress-bar.responsive{
                                     width: 80%;
                                 }
                             }

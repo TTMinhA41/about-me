@@ -23,6 +23,7 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll)
 
 
+
 doc.addEventListener("DOMContentLoaded", function(){
     const texts = [
         "Students",
