@@ -336,6 +336,7 @@
 #i-do {
     width: 100%;
     background-color: #f6f6f6;
+
     .inner-do-for {
         padding: 48px 0;
 
@@ -490,15 +491,18 @@
 #ican {
     background-color: #f6f6f6;
     padding-top: 48px;
+
     .inner-can {
         .row {
             align-items: center;
+
             .can-about {
                 .inner-can-ab {
                     .can-sides {
                         .each-can {
                             display: flex;
                             margin-top: 48px;
+
                             .faicon {
                                 font-size: 27px;
                                 color: #007e6a;
@@ -507,13 +511,15 @@
 
                             .can-box {
                                 margin-left: 16px;
+
                                 .title-ct {
                                     margin-bottom: 10px;
                                     font-size: 27px;
                                     font-weight: 600;
                                     color: #404044;
                                 }
-                                .can-text{
+
+                                .can-text {
                                     font-size: 18px;
                                     color: #707070;
                                 }
@@ -523,13 +529,73 @@
                     }
                 }
             }
-            .can-me{
-                img{
+
+            .can-me {
+                img {
                     max-width: 100%;
                     height: auto;
                     border-radius: 6px;
                 }
             }
+        }
+    }
+}
+
+#work {
+    .inner-work {
+        .row {
+            .img-box {
+                img {
+                    float: left;
+                    max-width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+#img-model {
+    display: none;
+    position: fixed;
+    z-index: 1400;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.4s ease;
+    .model-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 720px;
+        padding: 20px;
+        background-color: white;
+        .my-slides{
+            img{
+                width: 100%;
+                height: auto;
+            }
+            .num-slides{
+                color: #707070;
+            }
+        }
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            color: white;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .next{
+            right: 3%;
+        }
+        .model-exit{
+            float: right;
         }
     }
 }
