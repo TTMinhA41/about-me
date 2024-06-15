@@ -542,12 +542,31 @@
 }
 
 #work {
+    width: 100%;
+
     .inner-work {
+        padding: 48px 0;
+
+        .work-title-box {
+            margin-bottom: 48px;
+
+            h3 {
+                text-align: center;
+                color: #404044;
+                font-size: 38px;
+            }
+        }
+
         .row {
             .img-box {
-                img {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                cursor: pointer;
+
+                .start-pop {
                     float: left;
                     max-width: 100%;
+                    border-radius: 10px;
                 }
 
             }
@@ -566,6 +585,7 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     transition: all 0.4s ease;
+
     .model-content {
         position: relative;
         margin: auto;
@@ -573,16 +593,21 @@
         width: 720px;
         padding: 20px;
         background-color: white;
-        .my-slides{
-            img{
+        border-radius: 20px;
+        .my-slides {
+            img {
                 width: 100%;
                 height: auto;
             }
-            .num-slides{
+
+            .num-slides {
                 color: #707070;
+                font-size: 18px;
             }
         }
-        .prev, .next{
+
+        .prev,
+        .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -591,11 +616,18 @@
             font-size: 20px;
             font-weight: bold;
         }
-        .next{
+
+        .next {
             right: 3%;
         }
-        .model-exit{
-            float: right;
+
+        .model-exit {
+            cursor: pointer;
+            position: absolute;
+            color: #707070;
+            font-size: 18px;
+            top: 95%;
+            right: 3%;
         }
     }
 }
