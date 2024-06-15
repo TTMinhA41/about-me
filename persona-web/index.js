@@ -33,8 +33,8 @@ doc.addEventListener("DOMContentLoaded", function(){
     const typingTextElement = doc.getElementById('say-job')
     let textIndex = 0
     let charIndex = 0
-    const delayLoop = 250;
-    const typingSpeed = 250;
+    const delayLoop = 200;
+    const typingSpeed = 200;
 
     function type(){
         if (charIndex < texts[textIndex].length){

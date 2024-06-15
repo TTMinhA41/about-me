@@ -336,7 +336,6 @@
 #i-do {
     width: 100%;
     background-color: #f6f6f6;
-
     .inner-do-for {
         padding: 48px 0;
 
@@ -432,47 +431,103 @@
                         color: #707070;
                     }
                 }
-                .downer-skill{
-                    .progress-group{
-                        .progress-info{
+
+                .downer-skill {
+                    .progress-group {
+                        .progress-info {
                             margin-bottom: 30px;
-                            .progress-title{
+
+                            .progress-title {
                                 font-size: 18px;
                                 color: #707070;
                                 margin-bottom: 10px;
                                 font-weight: 500;
                                 margin: 30px 0;
                             }
-                            .progress-container{
+
+                            .progress-container {
                                 display: flex;
                                 height: 8px;
                                 overflow: hidden;
                                 background-color: #f6f6f6;
                                 border-radius: 4px;
-                                #progress-bar{
+
+                                #progress-bar {
                                     background-color: #007e6a;
                                     height: 100%;
                                     border-radius: 4px;
                                     transition: all 0.4s ease;
                                 }
-                                #progress-bar.ui{
+
+                                #progress-bar.ui {
                                     width: 80%;
                                 }
-                                #progress-bar.idea{
+
+                                #progress-bar.idea {
                                     width: 95%;
                                 }
-                                #progress-bar.brand{
+
+                                #progress-bar.brand {
                                     width: 55%;
                                 }
-                                #progress-bar.responsive{
+
+                                #progress-bar.responsive {
                                     width: 80%;
                                 }
                             }
                         }
-                        .progress-info.top{
+
+                        .progress-info.top {
                             margin-top: 48px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+#ican {
+    background-color: #f6f6f6;
+    padding-top: 48px;
+    .inner-can {
+        .row {
+            align-items: center;
+            .can-about {
+                .inner-can-ab {
+                    .can-sides {
+                        .each-can {
+                            display: flex;
+                            margin-top: 48px;
+                            .faicon {
+                                font-size: 27px;
+                                color: #007e6a;
+                                margin-top: 8px;
+                            }
+
+                            .can-box {
+                                margin-left: 16px;
+                                .title-ct {
+                                    margin-bottom: 10px;
+                                    font-size: 27px;
+                                    font-weight: 600;
+                                    color: #404044;
+                                }
+                                .can-text{
+                                    font-size: 18px;
+                                    color: #707070;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            .can-me{
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 6px;
                 }
             }
         }
