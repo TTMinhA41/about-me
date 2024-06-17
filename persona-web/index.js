@@ -13,10 +13,10 @@ doc.getElementById('phone').innerHTML = myObj.phonenum
 
 
 function handleScroll() {
-    if (window.scrollY > 50){
+    if (window.scrollY > 50) {
         header.classList.add('scroll-fixed')
     }
-    else{
+    else {
         header.classList.remove('scroll-fixed')
     }
 }
@@ -24,7 +24,7 @@ window.addEventListener('scroll', handleScroll)
 
 
 
-doc.addEventListener("DOMContentLoaded", function(){
+doc.addEventListener("DOMContentLoaded", function () {
     const texts = [
         "Students",
         "Web Designer",
@@ -36,18 +36,18 @@ doc.addEventListener("DOMContentLoaded", function(){
     const delayLoop = 200;
     const typingSpeed = 200;
 
-    function type(){
-        if (charIndex < texts[textIndex].length){
+    function type() {
+        if (charIndex < texts[textIndex].length) {
             typingTextElement.innerHTML += texts[textIndex].charAt(charIndex);
-            charIndex ++;
+            charIndex++;
             setTimeout(type, typingSpeed)
         }
-        else{
+        else {
             setTimeout(() => {
                 charIndex = 0;
                 textIndex = (textIndex + 1) % texts.length
                 typingTextElement.innerHTML = "";
-                setTimeout(type, typingSpeed); 
+                setTimeout(type, typingSpeed);
             }, delayLoop)
         }
     }
@@ -60,33 +60,74 @@ doc.addEventListener("DOMContentLoaded", function(){
 
 
 
-function openModel(){
+function openModel() {
     doc.getElementById('img-model').style.display = "block"
 }
 
-function closeModel(){
+function closeModel() {
     doc.getElementById('img-model').style.display = "none"
 }
 
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n){
+function plusSlides(n) {
     showSlides(slideIndex += n)
     console.log(slideIndex);
 }
 
-function currentSlide(n){
+function currentSlide(n) {
     showSlides(slideIndex = n)
 }
 
-function showSlides(n){
+function showSlides(n) {
     var i;
     var slides = doc.getElementsByClassName('my-slides');
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++){
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none'
     }
-    slides[slideIndex-1].style.display = 'block'
+    slides[slideIndex - 1].style.display = 'block'
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const targetDiv = document.getElementById('achs');
+    const counters = document.querySelectorAll('.counter');
+    let startedFlag = false;
+    let intervalId;
+
+    function checkVisibility() {
+        const rect = targetDiv.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            if (!startedFlag) {
+                startedFlag = true;
+                counters.forEach(counter => {
+                    counter.innerText = '0';
+                    const target = +counter.getAttribute('data-target');
+                    const textSpeed = target / 100;
+
+                    intervalId = setInterval(() => {
+                        const count = +counter.innerText;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + textSpeed);
+                        } else {
+                            counter.innerText = target;
+                            clearInterval(intervalId);
+                        }
+                    }, 20);
+                });
+            }
+        } else {
+            if (startedFlag) {
+                startedFlag = false;
+                counters.forEach(counter => {
+                    counter.innerText = '0';
+                });
+                clearInterval(intervalId);
+            }
+        }
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+});
