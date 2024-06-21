@@ -115,6 +115,9 @@
     z-index: 9;
     height: 110px;
 }
+#header.no-scroll{
+    background-color: rgba(6, 31, 36, 0.9);
+}
 
 #home {
     background-image: url(https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/banner1.jpg);
