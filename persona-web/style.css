@@ -5,6 +5,21 @@
     font-family: 'DM Sans', sans-serif;
 
 }
+:root {
+    --bgk-color: white;
+    --nd-bgk-color: #f6f6f6;
+    --f-color: black;
+    --lt-f-color: #707070;
+    --lts-f-color: #404044;
+}
+.dark-mode{
+    --bgk-color: black;
+    --nd-bgk-color: #090909;
+    --f-color: white;
+    --lt-f-color: #8f8f8f;
+    --lts-f-color: #bfbfbb;
+}
+
 
 
 .faicon {
@@ -84,7 +99,9 @@
                 background-color: #025b4d;
             }
         }
-
+        #theme-mode{
+            cursor: pointer;
+        }
         .head-icons {
             opacity: 1;
             color: white;
@@ -199,7 +216,7 @@
 #persona-card {
     display: inline-block;
     align-items: center;
-    background-color: #fafafa;
+    background-color: var(--nd-bgk-color);
     padding: 48px 0;
     width: 100%;
 
@@ -229,14 +246,14 @@
                 .smol-title {
                     font-size: 16px;
                     font-weight: 500;
-                    color: #707070;
+                    color: var(--lt-f-color);
                     letter-spacing: 1px;
                     display: inline-block;
                     margin-bottom: 4px;
                 }
 
                 .title {
-                    color: #404044;
+                    color: var(--lts-f-color);
                     font-size: 38px;
                     margin-bottom: 8px;
                 }
@@ -246,7 +263,7 @@
                     margin: 24px 0;
                     padding-right: 48px;
                     font-size: 18px;
-                    color: #707070;
+                    color: var(--lt-f-color);
                 }
             }
 
@@ -262,13 +279,13 @@
                         flex-wrap: wrap;
 
                         .each-info {
-                            color: #404044;
+                            color: var(--lts-f-color);
                             margin-right: 10px;
                         }
 
                         .info-of {
                             font-size: 18px;
-                            color: #707070;
+                            color: var(--lt-f-color);
                         }
                     }
                 }
@@ -285,7 +302,7 @@
 
                     .social-title {
                         margin-right: 16px;
-                        color: #404044;
+                        color: var(--lts-f-color);
                         font-size: 18px;
                     }
 
@@ -335,7 +352,7 @@
 
 #i-do {
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: var(--nd-bgk-color);
 
     .inner-do-for {
         padding: 48px 0;
@@ -346,14 +363,14 @@
 
                 .what-i-do-for-you {
                     text-align: center;
-                    color: #404044;
+                    color: var(--lts-f-color);
                     font-size: 38px;
                 }
             }
 
             .tasks {
                 .about-task {
-                    background-color: white;
+                    background-color: var(--bgk-color);
                     padding: 40px;
                     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
 
@@ -369,7 +386,7 @@
                     .task-text {
                         .task-title {
                             margin-bottom: 16px;
-                            color: #404044;
+                            color: var(--lts-f-color);
                             font-size: 27px;
                             transition: all 0.4s ease;
                             cursor: pointer;
@@ -377,7 +394,7 @@
 
                         .task-about {
                             font-size: 18px;
-                            color: #707070;
+                            color: var(--lt-f-color);
                         }
                     }
                 }
@@ -396,7 +413,7 @@
 
 #my-skill {
     padding: 96px 0;
-
+    background-color: var(--bgk-color);
     .inner-skill {
         .row {
             .skill-view {
@@ -409,17 +426,18 @@
 
             .skill-text {
                 .upper-skill {
+                    margin-left: 8.33333%;
                     .my-skill {
                         font-size: 16px;
                         font-weight: 500;
-                        color: #707070;
+                        color: var(--lt-f-color);
                         letter-spacing: 1px;
                         display: inline-block;
                         margin-bottom: 8px;
                     }
 
                     .skill-title {
-                        color: #404044;
+                        color: var(--lts-f-color);
                         font-size: 38px;
                         margin-bottom: 8px;
                     }
@@ -429,18 +447,21 @@
                         margin: 24px 0;
                         padding-right: 48px;
                         font-size: 18px;
-                        color: #707070;
+                        color: var(--lt-f-color);
                     }
                 }
 
                 .downer-skill {
-                    .progress-group {
+                    #skill-chart{
+                        width: 100%;
+                    }
+                    /* .progress-group {
                         .progress-info {
                             margin-bottom: 30px;
 
                             .progress-title {
                                 font-size: 18px;
-                                color: #707070;
+                                color: var(--lt-f-color);
                                 margin-bottom: 10px;
                                 font-weight: 500;
                                 margin: 30px 0;
@@ -481,7 +502,7 @@
                         .progress-info.top {
                             margin-top: 48px;
                         }
-                    }
+                    } */
                 }
             }
         }
@@ -489,7 +510,7 @@
 }
 
 #ican {
-    background-color: #f6f6f6;
+    background-color: var(--nd-bgk-color);
     padding-top: 48px;
 
     .inner-can {
@@ -516,12 +537,12 @@
                                     margin-bottom: 10px;
                                     font-size: 27px;
                                     font-weight: 600;
-                                    color: #404044;
+                                    color: var(--lts-f-color);
                                 }
 
                                 .can-text {
                                     font-size: 18px;
-                                    color: #707070;
+                                    color: var(--lt-f-color);
                                 }
                             }
 
@@ -544,6 +565,7 @@
 #achs{
     width: 100%;
     padding: 48px 0;
+    background-color: var(--bgk-color);
     .inner-ach{
         padding: 48px 0;
         .row{
@@ -553,14 +575,14 @@
                     text-align: center;
                     font-size: 46px;
                     font-weight: 700;
-                    color: #404044;
+                    color: var(--lts-f-color);
                     margin-bottom: 20px;
                 }
                 .ach-name{
                     font-size: 18px;
                     font-weight: 400;
                     text-transform: capitalize;
-                    color: #707070;
+                    color: var(--lt-f-color);
                     text-align: center;
                 }
             }
@@ -571,7 +593,7 @@
 
 #work {
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: var(--nd-bgk-color);
     .inner-work {
         padding: 48px 0;
 
@@ -580,7 +602,7 @@
 
             h3 {
                 text-align: center;
-                color: #404044;
+                color: var(--lts-f-color);
                 font-size: 38px;
             }
         }
@@ -629,7 +651,7 @@
             }
 
             .num-slides {
-                color: #707070;
+                color: var(--lt-f-color);
                 font-size: 18px;
             }
         }
@@ -656,7 +678,7 @@
         .model-exit {
             cursor: pointer;
             position: absolute;
-            color: #707070;
+            color: var(--lt-f-color);
             font-size: 18px;
             top: 95%;
             right: 3%;
@@ -685,7 +707,7 @@
         overflow: hidden;
     }
 
-    .head-icons.faicon.fa-moon-o {
+    .theme-mode.faicon.fa-moon-o {
         display: none;
     }
 }

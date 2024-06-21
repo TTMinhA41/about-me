@@ -34,12 +34,12 @@
                     <a class="hire" href="">Hire Me</a>
                     <i class="head-icons faicon fa-search"></i>
                 </div>
-                <i class="head-icons faicon fa-moon-o col l-1"></i>
+                <i id="theme-mode" class="head-icons faicon fa-moon-o col l-1" onclick="themeToggle()"></i>
             </div>
         </div>
     </div>
 
-    <div id="home">
+    <div id="home" class="none-mode">
         <div class="home-container grid wide">
             <div class="row">
                 <div class="greeting col l-8 m-12">
@@ -185,7 +185,7 @@
                     <img src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/about1.jpg"
                         alt="">
                 </div>
-                <div class="skill-text col l-5 l-o-1">
+                <div class="skill-text col l-5">
                     <div class="upper-skill">
                         <h6 class="my-skill">MY SKILL</h6>
                         <h1 class="skill-title">My Featured Skills</h1>
@@ -195,7 +195,8 @@
                         </p>
                     </div>
                     <div class="downer-skill">
-                        <div class="progress-group">
+                        <div id="skill-chart"></div>
+                        <!-- <div class="progress-group">
                             <div class="progress-info top">
                                 <h5 class="progress-title">UI/UX Design</h5>
                                 <div class="progress-container">
@@ -220,7 +221,7 @@
                                     <div id="progress-bar" class="responsive"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -327,26 +328,33 @@
             </div>
             <div class="row">
                 <div class="img-box col l-4">
-                    <img class="start-pop" src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog1.jpg"
+                    <img class="start-pop"
+                        src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog1.jpg"
                         onclick="openModel();currentSlide(1)" alt="">
                 </div>
                 <div class="img-box col l-4">
-                    <img class="start-pop" src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog2.jpg"
+                    <img class="start-pop"
+                        src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog2.jpg"
                         onclick="openModel();currentSlide(2)" alt="">
                 </div>
                 <div class="img-box col l-4">
-                    <img class="start-pop" src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog3.jpg"
+                    <img class="start-pop"
+                        src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog3.jpg"
                         onclick="openModel();currentSlide(3)" alt="">
                 </div>
                 <div class="img-box col l-4">
-                    <img class="start-pop" src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog4.jpg"
+                    <img class="start-pop"
+                        src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog4.jpg"
                         onclick="openModel();currentSlide(4)" alt="">
-                </div><div class="img-box col l-4">
-                    <img class="start-pop" src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog5.jpg"
+                </div>
+                <div class="img-box col l-4">
+                    <img class="start-pop"
+                        src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog5.jpg"
                         onclick="openModel();currentSlide(5)" alt="">
                 </div>
                 <div class="img-box col l-4">
-                    <img class="start-pop" src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog6.jpg"
+                    <img class="start-pop"
+                        src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog6.jpg"
                         onclick="openModel();currentSlide(6)" alt="">
                 </div>
             </div>
@@ -373,7 +381,8 @@
                 <img src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog4.jpg"
                     alt="">
                 <h6 class="num-slides">4/6</h6>
-            </div><div class="my-slides">
+            </div>
+            <div class="my-slides">
                 <img src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog5.jpg"
                     alt="">
                 <h6 class="num-slides">5/6</h6>
@@ -392,6 +401,39 @@
         <i class="faicon fa-level-up"></i>
     </button>
     <script src="index.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            // Set Data
+            const data = google.visualization.arrayToDataTable([
+                ['Language', 'Percent'],
+                ['C++', 68],
+                ['Python', 87],
+                ['HTML', 78],
+                ['CSS', 43],
+                ['JavaScript', 76]
+            ]);
+
+            // Set Options
+            const options = {
+                title: 'Language Skills',
+                colors: ['#007e6a', '#007e6a', '#007e6a', '#007e6a', '#007e6a', '#007e6a'],
+                chartArea:{
+                    backgroundColor: 'transparent',
+                    borderRadius: 10
+                }
+            };
+
+            // Draw
+            const chart = new google.visualization.BarChart(document.getElementById('skill-chart'));
+            chart.draw(data, options);
+
+        }
+    </script>
 </body>
 
 </html>
